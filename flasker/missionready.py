@@ -7,6 +7,11 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 
 
+@app.route('/')
+def index():
+    return "X"
+
+
 @app.route('/<custom_title>')
 @app.route('/index/<custom_title>')
 def index(custom_title):
